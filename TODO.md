@@ -1,7 +1,9 @@
-# Vercel Build Fix - TODO
+# Vercel Build Fix - TODO ✅
 
-- [x] Step 1: Created portfolio_site/backend/local_server.py with FastAPI server content (hidden from Vercel detector)
-- [ ] Step 2: Remove old backend/server.py (git rm)
-- [ ] Step 3: Commit and push: git add . && git commit -m "Fix Vercel FastAPI detection: rename backend/server.py to local_server.py" && git push
-- [ ] Step 4: Redeploy: vercel --prod
-- [ ] Step 5: Verify build succeeds in Vercel dashboard
+- [x] Step 1: Created backend/local_server.py ✅
+- [x] Step 2: Removed old backend/server.py ✅
+- [x] Step 3: Committed (c8bd81c) and pushed to main ✅
+
+**Next (user action):**
+- [ ] Step 4: cd portfolio_site && vercel --prod
+- [ ] Step 5: Check Vercel dashboard build logs, confirm success, visit deployed URL
