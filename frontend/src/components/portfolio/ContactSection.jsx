@@ -5,7 +5,11 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Label } from '../ui/label';
 import { toast } from 'sonner';
+import axios from 'axios';
 import { personalInfo } from '../../data/mock';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const contactLinks = [
   {
@@ -42,7 +46,7 @@ const ContactSection = () => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error('Please fill in all fields');
@@ -50,16 +54,24 @@ const ContactSection = () => {
     }
     setSending(true);
 
-    // Mock: save to localStorage
-    const messages = JSON.parse(localStorage.getItem('portfolio_messages') || '[]');
-    messages.push({ ...form, timestamp: new Date().toISOString() });
-    localStorage.setItem('portfolio_messages', JSON.stringify(messages));
-
-    setTimeout(() => {
-      setSending(false);
+    try {
+      await axios.post(`${API}/contact`, {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      });
       setForm({ name: '', email: '', message: '' });
       toast.success("Message sent! I'll get back to you soon.");
-    }, 1000);
+    } catch (err) {
+      const detail = err.response?.data?.detail;
+      if (Array.isArray(detail)) {
+        toast.error(detail[0]?.msg || 'Please check your input');
+      } else {
+        toast.error(typeof detail === 'string' ? detail : 'Failed to send message. Please try again.');
+      }
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -174,7 +186,7 @@ const ContactSection = () => {
               )}
             </Button>
             <p className="text-xs text-zinc-600 text-center">
-              Contact form is currently in demo mode.
+              Your message will be saved securely.
             </p>
           </form>
         </div>
