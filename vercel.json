@@ -1,0 +1,18 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/build",
+  "env": {
+    "NODE_ENV": "production",
+    "REACT_APP_API_URL": "@api_url"
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/:path((?!api).)*",
+      "destination": "/index.html"
+    }
+  ]
+}
