@@ -10,7 +10,6 @@ from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
-
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
@@ -31,7 +30,6 @@ app = FastAPI()
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
-
 
 # Define Models
 class StatusCheck(BaseModel):
@@ -55,7 +53,6 @@ class ContactMessage(BaseModel):
     email: str
     message: str
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
 
 # --- Routes ---
 @api_router.get("/")
@@ -95,7 +92,6 @@ async def get_contact_messages():
         if isinstance(m.get('created_at'), str):
             m['created_at'] = datetime.fromisoformat(m['created_at'])
     return messages
-
 
 # Include the router in the main app
 app.include_router(api_router)
