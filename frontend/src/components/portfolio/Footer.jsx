@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Linkedin, Mail, ArrowUp, Instagram } from 'lucide-react';
 import { personalInfo } from '../../data/mock';
 
 const Footer = () => {
@@ -32,6 +32,15 @@ const Footer = () => {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href={personalInfo.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-zinc-800/80 flex items-center justify-center text-zinc-500 hover:text-teal-400 hover:bg-zinc-800 transition-colors duration-200"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}

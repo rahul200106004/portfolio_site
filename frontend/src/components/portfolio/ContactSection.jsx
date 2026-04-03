@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Send, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Send, ArrowUpRight, Instagram } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
@@ -35,6 +35,12 @@ const contactLinks = [
     label: 'LinkedIn',
     value: 'Connect with me',
     href: personalInfo.linkedin,
+  },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    value: '@ig.rahul007',
+    href: personalInfo.instagram,
   },
 ];
 

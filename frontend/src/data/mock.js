@@ -8,6 +8,7 @@ export const personalInfo = {
   phone: "+91 6206038079",
   location: "Noida, India",
   linkedin: "https://www.linkedin.com/in/rahul-aryan-429860184",
+  instagram: "https://www.instagram.com/ig.rahul007",
   resumeUrl: "https://customer-assets.emergentagent.com/job_6a96a4ad-ed95-44dc-891d-dc916fa89fec/artifacts/q59cpdvc_Resume_Rahul%20Aryan.pdf",
   totalExperience: "1.5+ Years",
   summary: "AI Engineer specialized in building production-ready RAG pipelines and Agentic AI using LangChain and Azure OpenAI. Designing scalable APIs and architecting event-driven data pipelines that transform complex data into actionable insights.",
