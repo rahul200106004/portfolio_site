@@ -3,7 +3,7 @@ export const personalInfo = {
   firstName: "Rahul",
   lastName: "Aryan",
   title: "AI Engineer",
-  tagline: "Jack of all trades. Sometimes, master of one.",
+  tagline: "Building intelligent systems that think, adapt, and scale.",
   email: "rahularien06@gmail.com",
   phone: "+91 6206038079",
   location: "Noida, India",
@@ -13,8 +13,8 @@ export const personalInfo = {
   totalExperience: "1.5+ Years",
   summary: "AI Engineer specialized in building production-ready RAG pipelines and Agentic AI using LangChain and Azure OpenAI. Designing scalable APIs and architecting event-driven data pipelines that transform complex data into actionable insights.",
   about: {
-    intro: "I'm Rahul \u2014 an AI Engineer by profession and a relentlessly curious soul by nature. With a peculiar depth of knowledge spanning niche topics, I thrive at the intersection of technology and human experience.",
-    personality: "Beyond the terminal, you'll find me exploring uncharted territories across India, diving into books on human and animal psychology, practicing meditation, or creating travel content. I believe the best engineers are those who understand people \u2014 not just code.",
+    intro: "I'm Rahul \u2014 an AI Engineer focused on building production-grade GenAI solutions, from RAG pipelines and agentic workflows to scalable cloud-native architectures. I specialize in turning complex AI concepts into reliable, enterprise-ready systems.",
+    personality: "Beyond the terminal, you'll find me exploring new places across India, staying on top of emerging tech trends, or diving deep into research papers. I believe great engineering comes from continuous learning and real-world curiosity.",
     philosophy: "Every state I've traveled, every chess match I've played, every research paper I've read \u2014 it all feeds into how I approach problem-solving. Curiosity isn't just a trait; it's my operating system."
   }
 };
